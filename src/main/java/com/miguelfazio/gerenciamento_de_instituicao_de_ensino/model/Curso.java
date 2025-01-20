@@ -2,8 +2,6 @@ package com.miguelfazio.gerenciamento_de_instituicao_de_ensino.model;
 
 import lombok.Data;
 
-import java.util.UUID;
-
 @Data
 public class Curso {
     private static int idContador = 0;
