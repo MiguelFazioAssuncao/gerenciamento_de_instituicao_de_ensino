@@ -18,4 +18,12 @@ public class ServiceAlunos {
     public List<Aluno> consultarAlunos() {
         return Aluno.getAlunos();
     }
+
+    public static Aluno buscarPoriD(int id) {
+        Aluno aluno = Aluno.buscarPoriD(id);
+        if (aluno == null) {
+            throw new IllegalArgumentException("Aluno com ID " + id + " não encontrado.");
+        }
+        return aluno;
+    }
 }
