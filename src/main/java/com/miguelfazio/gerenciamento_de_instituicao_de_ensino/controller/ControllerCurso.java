@@ -23,4 +23,9 @@ public class ControllerCurso {
     public List<Curso> consultarCurso() {
         return serviceCurso.consultarCursos();
     }
+
+    @PostMapping("/{idCurso/matricular}")
+    public void realizarMatricula(@PathVariable int idCurso, @RequestBody int idAluno) {
+        serviceCurso.realizarMatricula(idCurso, idAluno);
+    }
 }
