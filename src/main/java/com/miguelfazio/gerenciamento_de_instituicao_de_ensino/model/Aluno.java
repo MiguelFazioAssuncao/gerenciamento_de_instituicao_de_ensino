@@ -32,4 +32,11 @@ private static List<Aluno> alunos = new ArrayList<>();
     public static void adicionarAluno(Aluno aluno) {
         alunos.add(aluno);
     }
+
+    public static Aluno buscarPoriD(int id) {
+        return alunos.stream()
+                .filter(curso -> curso.getID() == id)
+                .findFirst()
+                .orElse(null);
+    }
 }
