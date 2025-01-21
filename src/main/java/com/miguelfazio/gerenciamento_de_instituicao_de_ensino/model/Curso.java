@@ -40,5 +40,13 @@ public class Curso {
                 .filter(curso -> curso.getID() == id)
                 .findFirst()
                 .orElse(null);
+    }
+
+    public void realizarMatricula(int id, Aluno aluno) {
+        Curso curso = buscarPoriD(id);
+        if (curso == null) {
+            throw new IllegalArgumentException("Aluno inválido. Matrícula não pode ser realizada.");
         }
+        curso.getAlunosMatriculados().add(aluno);
+    }
 }
