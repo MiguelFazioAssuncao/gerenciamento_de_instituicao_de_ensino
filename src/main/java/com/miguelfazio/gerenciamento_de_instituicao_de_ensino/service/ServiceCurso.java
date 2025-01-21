@@ -12,7 +12,7 @@ public class ServiceCurso {
         return curso;
     }
 
-    public List<Curso> consultaCursos() {
+    public List<Curso> consultarCursos() {
         return Curso.getCursos();
     }
 }
