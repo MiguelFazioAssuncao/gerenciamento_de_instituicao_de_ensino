@@ -35,6 +35,10 @@ public class Curso {
         cursos.add(curso);
     }
 
-
-
+    public static Curso buscarPoriD(int id) {
+        return cursos.stream()
+                .filter(curso -> curso.getID() == id)
+                .findFirst()
+                .orElse(null);
+        }
 }
