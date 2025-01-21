@@ -4,7 +4,7 @@ import com.miguelfazio.gerenciamento_de_instituicao_de_ensino.model.Curso;
 
 import java.util.List;
 
-public class ServiceCursos {
+public class ServiceCurso {
 
     public Curso cadastrarCurso(String nome, String descricao, int cargaHoraria) {
         Curso curso = new Curso(nome, descricao, cargaHoraria);
