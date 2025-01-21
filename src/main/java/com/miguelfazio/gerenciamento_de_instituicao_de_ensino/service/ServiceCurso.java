@@ -32,4 +32,18 @@ public class ServiceCurso {
         }
         curso.getAlunosMatriculados().add(aluno);
     }
+
+    public void realizarMatricula(int idCurso, int idAluno) {
+        Curso curso = buscarPoriD(idCurso);
+        if (curso == null) {
+            throw new IllegalArgumentException("Curso inválido. Matrícula não pode ser realizada.");
+        }
+
+        Aluno aluno = ServiceAluno.buscarPoriD(idAluno);
+        if (aluno == null) {
+            throw new IllegalArgumentException("Aluno inválido. Matrícula não pode ser realizada.");
+        }
+
+        curso.getAlunosMatriculados().add(aluno);
+    }
 }
