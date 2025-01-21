@@ -9,7 +9,7 @@ import java.util.List;
 public class Curso {
     private static int idContador = 0;
     private static List<Curso> cursos = new ArrayList<>();
-    private static List<Aluno> alunosMatriculados = new ArrayList<>();
+    private List<Aluno> alunosMatriculados = new ArrayList<>();
 
     private final int ID;
     private String nome;
