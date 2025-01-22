@@ -7,9 +7,9 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class ServiceAlunos {
+public class ServiceAluno {
 
-    public Aluno cadastrarAlunos(String nome, Date dataNascimento) {
+    public Aluno cadastrarAluno(String nome, Date dataNascimento) {
         Aluno aluno = new Aluno(nome, dataNascimento);
         Aluno.adicionarAluno(aluno);
         return aluno;
@@ -17,5 +17,13 @@ public class ServiceAlunos {
 
     public List<Aluno> consultarAlunos() {
         return Aluno.getAlunos();
+    }
+
+    public static Aluno buscarPoriD(int id) {
+        Aluno aluno = Aluno.buscarPoriD(id);
+        if (aluno == null) {
+            throw new IllegalArgumentException("Aluno com ID " + id + " não encontrado.");
+        }
+        return aluno;
     }
 }

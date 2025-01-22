@@ -2,9 +2,14 @@ package com.miguelfazio.gerenciamento_de_instituicao_de_ensino.model;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 public class Curso {
     private static int idContador = 0;
+    private static List<Curso> cursos = new ArrayList<>();
+    private List<Aluno> alunosMatriculados = new ArrayList<>();
 
     private final int ID;
     private String nome;
@@ -22,4 +27,18 @@ public class Curso {
         return idContador++;
     }
 
+    public static List<Curso> getCursos() {
+        return new ArrayList<>(cursos);
+    }
+
+    public static void adicionarCurso(Curso curso) {
+        cursos.add(curso);
+    }
+
+    public static Curso buscarPoriD(int id) {
+        return cursos.stream()
+                .filter(curso -> curso.getID() == id)
+                .findFirst()
+                .orElse(null);
+    }
 }
