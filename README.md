@@ -1,5 +1,5 @@
 # Gerenciamento de Instituição de Ensino
-
+(Sem intenção de funcionarm 100% neste momento)
 Este é um projeto simples para gerenciar uma instituição de ensino, desenvolvido como exercício introdutório ao uso do Spring Boot. O objetivo é praticar conceitos básicos de desenvolvimento de APIs RESTful, modelagem de dados e aplicação de serviços com encapsulamento e boas práticas de programação.
 
 ---

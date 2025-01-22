@@ -2,9 +2,11 @@ package com.miguelfazio.gerenciamento_de_instituicao_de_ensino.service;
 
 import com.miguelfazio.gerenciamento_de_instituicao_de_ensino.model.Aluno;
 import com.miguelfazio.gerenciamento_de_instituicao_de_ensino.model.Curso;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ServiceCurso {
 
     public Curso cadastrarCurso(String nome, String descricao, int cargaHoraria) {
